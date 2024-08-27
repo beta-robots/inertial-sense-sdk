@@ -94,3 +94,14 @@ target_link_libraries(test_ros_bridge ${PROJECT_NAME})
 
 # catkin_add_gtest(test_client_reconnect test/test_client_reconnect.cpp)
 # target_link_libraries(test_client_reconnect ${PROJECT_NAME})
+
+############
+## Install ##
+#############
+
+install(
+	TARGETS inertial_sense_ros inertial_sense_node
+	ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+	LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+	RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
